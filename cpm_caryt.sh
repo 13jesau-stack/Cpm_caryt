@@ -9,7 +9,7 @@ echo "╚═══════════════════════�
 echo -e "${RESET}"
 sleep 1
 
-echo -e "${YELLOW}[+] Instalando dependencias...${RESET}"
+echo -e "${YELLOW}[+] Instalando dependencias espere...${RESET}"
 pkg install git -y >/dev/null 2>&1
 pkg install python -y >/dev/null 2>&1
 pip install requests >/dev/null 2>&1
@@ -29,7 +29,7 @@ clear
 
 echo -e "${CYAN}"
 echo "╔═════════════════════════════════╗"
-echo "║       🌟 MENÚ CPM CARYT 🌟      ║"
+echo "║ 🌟 MENÚ CPM CARYT RANGO KING🌟      ║"
 echo "╚═════════════════════════════════╝"
 echo -e "${RESET}"
 
@@ -37,7 +37,7 @@ echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1.py${RESET}"
 echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2.py${RESET}"
 echo -e "${YELLOW}[0]${RESET} Salir"
 echo
-read -p "Elige una opción: " opcion
+read -p "Elige una opción para poner rango: " opcion
 
 case $opcion in
   1)
