@@ -45,7 +45,7 @@ while true; do
   echo
   echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1.py${RESET}"
   echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2.py${RESET}"
-  echo -e "${YELLOW}[3]${RESET} Abrir ${CYAN}YouTube${RESET}"
+  echo -e "${YELLOW}[3]${RESET} Abrir ${CYAN}YouTube$ caryt {RESET}"
   echo -e "${YELLOW}[0]${RESET} Salir"
   echo
   read -p "👉 Elige una opción: " opcion
@@ -63,7 +63,7 @@ while true; do
       ;;
     3)
       echo -e "${CYAN}Abriendo YouTube...${RESET}"
-      termux-open-url "https://www.youtube.com"
+      termux-open-url "https://youtube.com/@caryt.305?si=yzom3bnFIL8ToDCs"
       ;;
     0)
       clear
