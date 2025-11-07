@@ -45,7 +45,7 @@ while true; do
   echo
   echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1.py${RESET}"
   echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2.py${RESET}"
-  echo -e "${YELLOW}[3]${RESET} Abrir ${CYAN}YouTube$ caryt {RESET}"
+  echo -e "${YELLOW}[3]${RESET} Abrir ${CYAN}YouTube @caryt.305 $ {RESET}"
   echo -e "${YELLOW}[0]${RESET} Salir"
   echo
   read -p "👉 Elige una opción: " opcion
