@@ -1,15 +1,24 @@
+
+cat > cpm_caryt.sh <<'EOF'
 #!/bin/bash
 clear
-RED='\033[1;31m'; GREEN='\033[1;32m'; BLUE='\033[1;34m'; YELLOW='\033[1;33m'; CYAN='\033[1;36m'; RESET='\033[0m'
 
-echo -e "${CYAN}"
-echo "╔═══════════════════════════════════╗"
-echo "║        ✨ CPM CARYT ✨             ║"
-echo "╚═══════════════════════════════════╝"
-echo -e "${RESET}"
+# Colores
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+BLUE='\033[1;34m'
+YELLOW='\033[1;33m'
+CYAN='\033[1;36m'
+RESET='\033[0m'
+
+# Marco superior
+echo -e "${BLUE}╔═══════════════════════════════════════════╗${RESET}"
+echo -e "${BLUE}║${CYAN}           ✨  C P M   C A R Y T  ✨          ${BLUE}║${RESET}"
+echo -e "${BLUE}╚═══════════════════════════════════════════╝${RESET}"
+echo
+
 sleep 1
-
-echo -e "${YELLOW}[+] Instalando dependencias espere...${RESET}"
+echo -e "${YELLOW}[+] Instalando dependencias...${RESET}"
 pkg install git -y >/dev/null 2>&1
 pkg install python -y >/dev/null 2>&1
 pip install requests >/dev/null 2>&1
@@ -27,31 +36,49 @@ fi
 sleep 1
 clear
 
-echo -e "${CYAN}"
-echo "╔═════════════════════════════════╗"
-echo "║ 🌟 MENÚ CPM CARYT RANGO KING🌟      ║"
-echo "╚═════════════════════════════════╝"
-echo -e "${RESET}"
+# Menú
+while true; do
+  clear
+  echo -e "${BLUE}╔═══════════════════════════════════════════╗${RESET}"
+  echo -e "${BLUE}║${CYAN}           🌟 MENÚ CPM CARYT 🌟              ${BLUE}║${RESET}"
+  echo -e "${BLUE}╚═══════════════════════════════════════════╝${RESET}"
+  echo
+  echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1.py${RESET}"
+  echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2.py${RESET}"
+  echo -e "${YELLOW}[3]${RESET} Abrir ${CYAN}YouTube${RESET}"
+  echo -e "${YELLOW}[0]${RESET} Salir"
+  echo
+  read -p "👉 Elige una opción: " opcion
 
-echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1${RESET}"
-echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2${RESET}"
-echo -e "${YELLOW}[0]${RESET} Salir"
-echo
-read -p "Elige una opción para poner rango: " opcion
-
-case $opcion in
-  1)
-    echo -e "${GREEN}Iniciando cpm1.py...${RESET}"
-    python cpm1.py
-    ;;
-  2)
-    echo -e "${GREEN}Iniciando cpm2...${RESET}"
-    python cpm2.py
-    ;;
-  0)
-    echo -e "${RED}Saliendo...${RESET}"
-    ;;
-  *)
-    echo -e "${RED}Opción no válida${RESET}"
-    ;;
-esac
+  case $opcion in
+    1)
+      echo -e "${GREEN}Iniciando cpm1.py...${RESET}"
+      python cpm1.py
+      read -p "Presiona Enter para volver al menú..."
+      ;;
+    2)
+      echo -e "${GREEN}Iniciando cpm2.py...${RESET}"
+      python cpm2.py
+      read -p "Presiona Enter para volver al menú..."
+      ;;
+    3)
+      echo -e "${CYAN}Abriendo YouTube...${RESET}"
+      termux-open-url "https://www.youtube.com"
+      ;;
+    0)
+      clear
+      echo -e "${RED}Saliendo...${RESET}"
+      echo
+      echo -e "${BLUE}╔═══════════════════════════════════╗${RESET}"
+      echo -e "${BLUE}║${CYAN}     💀 Creado por Caryt 💀         ${BLUE}║${RESET}"
+      echo -e "${BLUE}╚═══════════════════════════════════╝${RESET}"
+      echo
+      exit 0
+      ;;
+    *)
+      echo -e "${RED}Opción no válida${RESET}"
+      sleep 1
+      ;;
+  esac
+done
+EOF
