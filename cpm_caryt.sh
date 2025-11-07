@@ -33,8 +33,8 @@ echo "║ 🌟 MENÚ CPM CARYT RANGO KING🌟      ║"
 echo "╚═════════════════════════════════╝"
 echo -e "${RESET}"
 
-echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1.py${RESET}"
-echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2.py${RESET}"
+echo -e "${YELLOW}[1]${RESET} Ejecutar ${GREEN}cpm1${RESET}"
+echo -e "${YELLOW}[2]${RESET} Ejecutar ${GREEN}cpm2${RESET}"
 echo -e "${YELLOW}[0]${RESET} Salir"
 echo
 read -p "Elige una opción para poner rango: " opcion
@@ -45,7 +45,7 @@ case $opcion in
     python cpm1.py
     ;;
   2)
-    echo -e "${GREEN}Iniciando cpm2.py...${RESET}"
+    echo -e "${GREEN}Iniciando cpm2...${RESET}"
     python cpm2.py
     ;;
   0)
